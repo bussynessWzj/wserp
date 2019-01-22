@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="top|right"
+    >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击我"
+        android:id="@+id/btn"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg">
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.hszl.erp.ui.MyRadioButton
+            android:id="@+id/rbHome"
+            app:gravity="right|top"
+            app:paddingRight="@dimen/dp_26"
+            app:paddingTop="@dimen/dp_2"
+            app:radius="@dimen/dp_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_navigation_home"
+            android:gravity="center"
+            android:text="@string/main_home"
+            android:textColor="@drawable/main_text_color" />
+
+        <com.hszl.erp.ui.MyRadioButton
+            android:id="@+id/rbMessage"
+            app:radius="@dimen/dp_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_navigation_message"
+            android:gravity="center"
+            android:text="@string/main_message"
+            android:textColor="@drawable/main_text_color" />
+
+        <com.hszl.erp.ui.MyRadioButton
+            android:id="@+id/rbFile"
+            app:radius="@dimen/dp_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_navigation_file"
+            android:gravity="center"
+            android:text="@string/main_file_cabinet"
+            android:textColor="@drawable/main_text_color" />
+
+        <com.hszl.erp.ui.MyRadioButton
+            android:id="@+id/rbMy"
+            app:radius="@dimen/dp_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_navigation_my"
+            android:gravity="center"
+            android:text="@string/main_my"
+            android:textColor="@drawable/main_text_color" />
+    </RadioGroup>
+</RelativeLayout>

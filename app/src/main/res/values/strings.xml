@@ -3,4 +3,33 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="login">登录</string>
+    <string name="enter_pwd">请输入密码</string>
+    <string name="enter_username">请输入账号</string>
+    <string name="remenberpwd">记住密码</string>
+    <string name="login_settting">设置</string>
+    <string name="setting_ip">ip地址</string>
+    <string name="setting_port">端口号</string>
+    <string name="sure">确定</string>
+    <string name="main_home">首页</string>
+    <string name="main_message">消息</string>
+    <string name="main_file_cabinet">文件柜</string>
+    <string name="main_my">我的</string>
+    <string name="home_title">娲石</string>
+    <string name="home_waitwork">待办工作</string>
+    <string name="home_workdone">已办工作</string>
+    <string name="home_delegatework">委托工作</string>
+    <string name="home_creatwork">新建工作</string>
+    <string-array name="home_grid_text">
+        <item>印章</item>
+        <item>邮件</item>
+        <item>新闻</item>
+        <item>公告</item>
+        <item>会议</item>
+        <item>生产</item>
+        <item>采购</item>
+        <item>仓库</item>
+        <item>销售</item>
+        <item>财务</item>
+    </string-array>
 </resources>

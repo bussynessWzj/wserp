@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_decor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="-126dp">
+
+    <!--顶部栏-->
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_1"
+        android:translationZ="@dimen/dp_2">
+
+        <TextView
+            android:id="@+id/tvLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_49"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="返回" />
+
+        <ImageView
+            android:id="@+id/imgLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_49"
+            android:layout_toRightOf="@id/tvLeft"
+            android:maxWidth="@dimen/dp_10"
+            android:maxHeight="@dimen/dp_49"
+            android:padding="@dimen/dp_9"
+            android:src="@mipmap/main_gray" />
+
+        <TextView
+
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_49"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="返回" />
+
+        <ImageView
+            android:id="@+id/imgRight"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_49"
+            android:layout_toLeftOf="@id/tvRight"
+            android:maxWidth="@dimen/dp_10"
+            android:maxHeight="@dimen/dp_49"
+            android:padding="@dimen/dp_9"
+            android:src="@mipmap/main_gray"
+            />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imgRight1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_49"
+            android:layout_toLeftOf="@id/imgRight"
+            android:maxWidth="@dimen/dp_10"
+            android:maxHeight="@dimen/dp_49"
+            android:padding="@dimen/dp_9"
+            android:src="@mipmap/main_gray" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_toLeftOf="@id/imgRight"
+            android:layout_toRightOf="@id/imgLeft"
+            android:gravity="center"
+            android:text="我是标题" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlTop"></FrameLayout>
+
+
+</RelativeLayout>

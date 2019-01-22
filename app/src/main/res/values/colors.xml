@@ -3,4 +3,22 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="driver">#DCDDDF</color>
+    <color name="login_remenberpwd">#999999</color>
+    <color name="login_setting">#3CC3B6</color>
+    <color name="main_checked">#23CED0</color>
+    <color name="home_title">#1A1A1A</color>
+    <color name="home_text">#5B636B</color>
+    <color name="home_workwait">#23CFD1</color>
+    <color name="home_otherwork">#4D4D4D</color>
+    <color name="home_background">#fafbfc</color>
+    <color name="work_flow_tabunderline">#3CC3B6</color>
+    <color name="work_flow_edit_background">#E8EBEA</color>
+    <color name="home_grid_text">#4C4C50</color>
+    <color name="work_text_time">#9B9F9F</color>
+    <color name="work_status_bg">#EFFFFE</color>
+    <color name="setting_line">#F0F1F2</color>
+    <color name="setting_sure">#11D1CA</color>
 </resources>

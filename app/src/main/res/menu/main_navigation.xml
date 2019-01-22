@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item android:id="@+id/navigationHome"
+        android:title="@string/main_home"
+        android:icon="@drawable/main_navigation_home"
+        android:enabled="true"
+        />
+    <item android:id="@+id/navigationMessage"
+        android:title="@string/main_message"
+        android:icon="@drawable/main_navigation_message"
+        android:enabled="true"
+        />
+    <item android:id="@+id/navigationFileCabinet"
+        android:title="@string/main_file_cabinet"
+        android:icon="@drawable/main_navigation_file"
+        android:enabled="true"
+        />
+    <item android:id="@+id/navigationMy"
+        android:title="@string/main_my"
+        android:icon="@drawable/main_navigation_my"
+        android:enabled="true"
+        />
+</menu>

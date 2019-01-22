@@ -7,5 +7,19 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <declare-styleable name="MyRadioButton">
+        <attr name="radius" format="dimension|reference"></attr>
+        <attr name="isShow" format="boolean"></attr>
+        <attr name="gravity">
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+            <flag name="top" value="48"/>
+            <flag name="bottom" value="80"/>
+        </attr>
+        <attr name="paddingTop" format="dimension|reference"></attr>
+        <attr name="paddingLeft" format="dimension|reference"></attr>
+        <attr name="paddingRight" format="dimension|reference"></attr>
+        <attr name="paddingBottom" format="dimension|reference"></attr>
+        <attr name="padding" format="dimension|reference"></attr>
+    </declare-styleable>
 </resources>
