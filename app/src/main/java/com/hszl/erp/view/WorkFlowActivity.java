@@ -1,17 +1,14 @@
 package com.hszl.erp.view;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import android.view.View;
 
 import com.hszl.erp.R;
-import com.hszl.erp.adapter.WorkFlowAdapter;
-import com.hszl.erp.base.BaseActivity1;
+import com.hszl.erp.adapter.TabLayoutAdapter;
 import com.hszl.erp.base.BaseMvpActivity;
 import com.hszl.erp.contract.WorkFlowContract;
 import com.hszl.erp.fragment.WorkDelegateFragment;
@@ -31,7 +28,7 @@ public class WorkFlowActivity extends BaseMvpActivity<WorkFlowPresent,WorkFlowCo
 
     TabLayout tabWork;
     ViewPager vpInfo;
-    WorkFlowAdapter adapter;
+    TabLayoutAdapter adapter;
     List<Fragment> list=new ArrayList<>();
     WorkWaitFragment waitFragment;
     WorkDoneFragment doneFragment;
@@ -64,7 +61,7 @@ public class WorkFlowActivity extends BaseMvpActivity<WorkFlowPresent,WorkFlowCo
         setTitle("工作流");
         initview();
         tag=getIntent().getStringExtra("tag");
-        initFragment();
+        initFragment(savedInstanceState);
         bindViewPageAndTabLayout();
         tabSelect(tag);
     }
@@ -82,7 +79,7 @@ public class WorkFlowActivity extends BaseMvpActivity<WorkFlowPresent,WorkFlowCo
         }
     }
 
-    public void initFragment()
+    public void initFragment(Bundle savedInstanceState)
     {
         waitFragment=new WorkWaitFragment();
         doneFragment=new WorkDoneFragment();
@@ -97,7 +94,7 @@ public class WorkFlowActivity extends BaseMvpActivity<WorkFlowPresent,WorkFlowCo
         tabWork=findViewById(R.id.tabWork);
         vpInfo=findViewById(R.id.vpInfo);
         FragmentManager fragmentManager=this.getSupportFragmentManager();
-        adapter=new WorkFlowAdapter(fragmentManager,list);
+        adapter=new TabLayoutAdapter(fragmentManager,list,new String[]{"待办","已办","委托"});
         vpInfo.setAdapter(adapter);
     }
 

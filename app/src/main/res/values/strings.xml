@@ -32,4 +32,10 @@
         <item>销售</item>
         <item>财务</item>
     </string-array>
+    <string name="file_cabinet_actPersonal_title">工作文件夹</string>
+    <string name="my_editor_head">编辑头像</string>
+    <string name="my_userinfo">个人信息</string>
+    <string name="my_contact">联系方式</string>
+    <string name="my_changepwd">密码修改</string>
+    <string name="my_log_out">退出登录</string>
 </resources>

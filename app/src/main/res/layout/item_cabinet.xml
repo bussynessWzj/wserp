@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp_16"
+    >
+    <TextView
+        android:layout_marginTop="@dimen/dp_27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="集团文件公示栏"
+        android:textColor="@color/home_title"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginLeft="@dimen/dp_11"
+        />
+    <View
+        android:layout_marginTop="@dimen/dp_26"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cabinet_list_line"
+        />
+</LinearLayout>

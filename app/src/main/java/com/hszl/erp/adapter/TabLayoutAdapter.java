@@ -8,14 +8,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-public class WorkFlowAdapter extends FragmentPagerAdapter {
+public class TabLayoutAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> list;
-    String[] title=new String[]{"待办","已办","委托"};
+    String[] title;
 
-    public WorkFlowAdapter(FragmentManager fm, List<Fragment> list) {
+    public TabLayoutAdapter(FragmentManager fm, List<Fragment> list,String[] title) {
         super(fm);
         this.list = list;
+        this.title=title;
     }
 
     @Override

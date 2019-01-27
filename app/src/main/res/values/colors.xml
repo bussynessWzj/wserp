@@ -21,4 +21,8 @@
     <color name="work_status_bg">#EFFFFE</color>
     <color name="setting_line">#F0F1F2</color>
     <color name="setting_sure">#11D1CA</color>
+    <color name="cabinet_list_line">#E5EAEA</color>
+    <color name="group_file_text">#818181</color>
+    <color name="file_year">#CACCCB</color>
+    <color name="my_editor_head">#ffeeeeee</color>
 </resources>

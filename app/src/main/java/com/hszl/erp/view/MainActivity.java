@@ -2,8 +2,10 @@ package com.hszl.erp.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 
 import com.hszl.erp.R;
@@ -14,11 +16,11 @@ import com.hszl.erp.present.MainPresent;
 import com.hszl.erp.ui.MyRadioButton;
 import com.hszl.erp.utils.ImmersionUtils;
 
-public class MainActivity extends BaseMvpActivity<MainPresent,MainContract.IMainView> implements RadioGroup.OnCheckedChangeListener,MainContract.IMainView {
+public class MainActivity extends BaseMvpActivity<MainPresent,MainContract.IMainView> implements
+        RadioGroup.OnCheckedChangeListener,MainContract.IMainView {
 
+    FrameLayout flFragment;
     RadioGroup rg;
-    MainPresent present;
-    Button btn;
     //    MyRadioButton rbHome,rbMessage,rbFile,rbMy;
 
 
@@ -29,14 +31,24 @@ public class MainActivity extends BaseMvpActivity<MainPresent,MainContract.IMain
         initLayout(R.layout.act_main);
         ImmersionUtils.immersionTop(this, rlTop);
         initview();
-//        present =  mPresent;
+        initFragment(savedInstanceState);
+        rg.check(R.id.rbHome);
     }
 
+    @Override
+    public FragmentManager getFM() {
+        return this.getSupportFragmentManager();
+    }
+
+    protected void initFragment(Bundle savedInstanceState) {
+        mPresent.restoreFragment(savedInstanceState);
+    }
+
+
     protected void initview() {
+        flFragment=findViewById(R.id.flFragment);
         rg = findViewById(R.id.rg);
-        btn=findViewById(R.id.btn);
         rg.setOnCheckedChangeListener(this);
-        btn.setOnClickListener(this);
     }
 
     @Override
@@ -55,13 +67,15 @@ public class MainActivity extends BaseMvpActivity<MainPresent,MainContract.IMain
         int checkid = group.getCheckedRadioButtonId();
         switch (checkid) {
             case R.id.rbHome:
-                present.changeFragment();
+                mPresent.changeFragment(R.id.rbHome);
                 break;
             case R.id.rbMessage:
                 break;
             case R.id.rbFile:
+                mPresent.changeFragment(R.id.rbFile);
                 break;
             case R.id.rbMy:
+                mPresent.changeFragment(R.id.rbMy);
                 break;
         }
     }
@@ -78,7 +92,7 @@ public class MainActivity extends BaseMvpActivity<MainPresent,MainContract.IMain
      */
     public void click()
     {
-        present.getMessage();
+        mPresent.getMessage();
     }
 
     public RadioGroup getRg()
