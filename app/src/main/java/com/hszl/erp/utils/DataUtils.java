@@ -1,5 +1,12 @@
 package com.hszl.erp.utils;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.renderscript.Allocation;
+import android.renderscript.Element;
+import android.renderscript.RenderScript;
+import android.renderscript.ScriptIntrinsicBlur;
+
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -46,5 +53,27 @@ public class DataUtils {
     {
 
         return str.matches("\"^[\\\\w-]+@[\\\\w-]+(\\\\.[\\\\w-]+)+$\"");
+    }
+
+    /**
+     * 高斯模糊效果
+     * @param context
+     * @param bitmap
+     * @return
+     */
+    public static Bitmap blurBitmap(Context context, Bitmap bitmap)
+    {
+        Bitmap outBitmap=Bitmap.createBitmap(1500,1000,Bitmap.Config.ARGB_8888);
+        RenderScript rs=RenderScript.create(context);
+        ScriptIntrinsicBlur blur=ScriptIntrinsicBlur.create(rs,Element.U8_4(rs));
+        Allocation allin=Allocation.createFromBitmap(rs,bitmap);
+        Allocation allout=Allocation.createFromBitmap(rs,outBitmap);
+        blur.setRadius(20.f);
+        blur.setInput(allin);
+        blur.forEach(allout);
+        allout.copyTo(outBitmap);
+        //        bitmap.recycle();
+        //        rs.destroy();
+        return outBitmap;
     }
 }

@@ -33,6 +33,9 @@
 
         </activity>
         <activity android:name=".view.PersonalInfoActivity">
+
+        </activity>
+        <activity android:name=".view.WriteEmailActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
