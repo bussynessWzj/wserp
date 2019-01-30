@@ -19,6 +19,7 @@ import com.hszl.erp.contract.CommonalityContract;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class CommonalityFragment extends MVPBaseFragment<CommonalityPresent,CommonalityContract.ICommonalityView> implements
         CommonalityContract.ICommonalityView,BaseQuickAdapter.OnItemClickListener {
 

@@ -68,14 +68,17 @@ public class MainActivity extends BaseMvpActivity<MainPresent,MainContract.IMain
         switch (checkid) {
             case R.id.rbHome:
                 mPresent.changeFragment(R.id.rbHome);
+                hideTop();
                 break;
             case R.id.rbMessage:
                 break;
             case R.id.rbFile:
                 mPresent.changeFragment(R.id.rbFile);
+                hideTop();
                 break;
             case R.id.rbMy:
                 mPresent.changeFragment(R.id.rbMy);
+                hideTop();
                 break;
         }
     }

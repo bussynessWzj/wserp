@@ -22,4 +22,9 @@
         <attr name="paddingBottom" format="dimension|reference"></attr>
         <attr name="padding" format="dimension|reference"></attr>
     </declare-styleable>
+    <declare-styleable name="MySwitchButton">
+        <attr name="check_background" format="color|reference"></attr>
+        <attr name="uncheck_background" format="color|reference"></attr>
+        <attr name="isOn" format="boolean"/>
+    </declare-styleable>
 </resources>

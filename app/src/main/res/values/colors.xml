@@ -25,4 +25,6 @@
     <color name="group_file_text">#818181</color>
     <color name="file_year">#CACCCB</color>
     <color name="my_editor_head">#ffeeeeee</color>
+    <color name="contact_type_text">#9699A1</color>
+    <color name="contact_type_edit">#2B2F33</color>
 </resources>

@@ -81,7 +81,10 @@ public abstract class BaseMvpActivity<T extends BasePresent<V>,V> extends AppCom
      */
     public void setTitle(String title)
     {
-        tvTitle.setText(title);
+        if (rlTop.getVisibility()!=View.VISIBLE) {
+            rlTop.setVisibility(View.VISIBLE);
+            tvTitle.setText(title);
+        }
     }
 
     /**
@@ -90,7 +93,18 @@ public abstract class BaseMvpActivity<T extends BasePresent<V>,V> extends AppCom
      */
     public void setTitleTextColor(int resid)
     {
-        tvTitle.setTextColor(resid);
+        if (rlTop.getVisibility()!=View.VISIBLE) {
+            rlTop.setVisibility(View.VISIBLE);
+            tvTitle.setTextColor(resid);
+        }
+    }
+
+    public void hideTop()
+    {
+        if (rlTop.getVisibility()==View.VISIBLE)
+        {
+            rlTop.setVisibility(View.INVISIBLE);
+        }
     }
 
     /**

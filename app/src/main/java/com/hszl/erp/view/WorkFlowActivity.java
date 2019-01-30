@@ -23,6 +23,8 @@ import java.util.List;
 
 /**
  * 需要调试数据加载的数量不对
+ * 这里不需要对在异常情况下activity被回收之后重启对于fragment的恢复
+ * 做任何的操作，这部分的操作被FragmentPagerAdapter处理了
  */
 public class WorkFlowActivity extends BaseMvpActivity<WorkFlowPresent,WorkFlowContract.IWorkFlowActivity> implements WorkFlowContract.IWorkFlowActivity {
 

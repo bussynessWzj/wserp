@@ -74,6 +74,7 @@ public class MainPresent extends BasePresent<MainContract.IMainView> implements 
             fm.beginTransaction().show(homeFragment)
                     .hide(fileCabinetFragment)
                     .hide(myFragment).commit();
+
         }else
         {
             myFragment=MyFragment.newInstance();
@@ -85,6 +86,7 @@ public class MainPresent extends BasePresent<MainContract.IMainView> implements 
                     .hide(myFragment)
                     .hide(fileCabinetFragment).commit();
         }
+        ((MainActivity)getView()).getRg().check(R.id.rbHome);
     }
 
     /**
